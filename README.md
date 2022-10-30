@@ -1,6 +1,7 @@
 # exam-analysis
 
-This repository contains code for analyzing organic chemistry exams for their use of visual aids in order to solve problems.  
+This repository contains code for analyzing organic chemistry exams for their 
+use of visual aids in order to solve problems.  
 
-Authors: Sarah Brown, Cameron Dean  
+Author: Sarah Brown (sarahbrown6449@gmail.com)  
 Last Updated: 2022

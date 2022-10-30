@@ -1,0 +1,3 @@
+r_id,exam,q_number,exam_id,correct,drawing,drawing_arrows,drawing_numbering,drawing_steps,drawing_labelling,drawing_product,drawing_moleculefromwords,drawing_orbitals,drawing_colourcoding,drawing_lonepairs,drawing_expanding,redrawing,redrawing_line,redrawing_3d,redrawing_newman,redrawing_chair,redrawing_structural
+0,f2021,1,1,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+1,w2020,5,1,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
