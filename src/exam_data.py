@@ -59,10 +59,8 @@ class Response:
         for attr in response_attrs:
             setattr(self, attr, response_data[attr])
 
-        # Ensure that "correct", "drawing", and "redrawing" columns exist in the 
+        # Ensure that "drawing", and "redrawing" columns exist in the 
         # response_config file
-        assert "correct" in response_attrs, \
-            "'correct' must be an entry in response_config"
         assert "drawing" in response_attrs, \
             "'drawing' must be an entry in response_config"
         assert "redrawing" in response_attrs, \
@@ -132,18 +130,14 @@ class Question:
 
         # Perform data summary calculations
         num_responses = len(responses_list)
-        num_correct = 0
         num_drawings = 0
         num_redrawings = 0
         for response_object in responses_list:
-            if response_object.correct:
-                num_correct += 1
             if response_object.drawing:
                 num_drawings += 1
             if response_object.redrawing:
                 num_redrawings += 1
 
         self.number_responses = num_responses
-        self.fraction_correct = num_correct / num_responses
         self.fraction_with_drawing = num_drawings / num_responses
         self.fraction_with_redrawing = num_redrawings / num_responses
