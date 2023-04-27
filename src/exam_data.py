@@ -55,6 +55,7 @@ class Response:
             )
         response_data = response_config.iloc[r_id]
 
+        # Set attributes of each response object
         response_attrs = response_config.columns
         for attr in response_attrs:
             setattr(self, attr, response_data[attr])
@@ -98,7 +99,9 @@ class Question:
             )
         question_data = question_config.iloc[q_id]
 
-        for attr in question_config.columns:
+        #Set attributes of each question object
+        question_attrs = question_config.columns
+        for attr in question_attrs:
             setattr(self, attr, question_data[attr])
 
         # Get corresponding responses data
@@ -106,8 +109,6 @@ class Question:
             responses_file_path,
             index_col=0
             )
-
-        question_attrs = question_config.columns
         response_attrs = response_config.columns
 
         # Ensure that "exam" and "q_number" columns exist in the 
@@ -138,6 +139,7 @@ class Question:
             if response_object.redrawing:
                 num_redrawings += 1
 
+        # Add summary calculations as question attributes
         self.number_responses = num_responses
         self.fraction_with_drawing = num_drawings / num_responses
         self.fraction_with_redrawing = num_redrawings / num_responses
